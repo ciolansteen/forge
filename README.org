@@ -9,6 +9,27 @@ of Magit and the rest of Emacs.
 
 Please see the [[https://docs.magit.vc/forge][manual]] and the [[https://emacsair.me/2018/12/19/forge-0.1][announcement]] for more information.
 
+** Fork status: Gitea API support
+
+This fork tracks upstream Forge and carries an experimental read-only
+Gitea API backend.  The implementation promotes Gitea repositories from
+URL-only support to API-backed synchronization using Ghub's Gitea
+transport.
+
+Current Gitea support can:
+
+- recognize Gitea repositories from remotes and host configuration;
+- pull repository metadata;
+- synchronize labels, milestones, assignees and collaborators;
+- synchronize issues, pull requests and their comments;
+- reuse the Gitea backend for Forgejo repositories.
+
+Mutation commands are not implemented yet.  Creating, editing, closing
+or merging topics from Forge still needs a follow-up implementation.
+
+The =main= branch is the integration branch for this fork and is intended
+to be mirrored to a GitHub repository for upstream pull requests.
+
 #+html: <br><br>
 #+html: <a href="https://github.com/magit/forge/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/magit/forge/actions/workflows/compile.yml/badge.svg"/></a>
 #+html: <a href="https://github.com/magit/forge/actions/workflows/manual.yml"><img alt="Manual" src="https://github.com/magit/forge/actions/workflows/manual.yml/badge.svg"/></a>
